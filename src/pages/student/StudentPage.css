@@ -1,184 +1,253 @@
-/* Global Reset & Font */
-html, body {
+/* General Styling */
+* {
   margin: 0;
   padding: 0;
-  font-family: Arial, sans-serif;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
 }
 
-/* Main Container */
+body {
+  background-color: #f5f5f5;
+  color: #333;
+  line-height: 1.6;
+}
+
 .student-page {
   max-width: 1200px;
-  margin: 0 auto;
+  margin: auto;
   padding: 20px;
 }
 
-/* Each Section Card */
-section {
-  background-color: #ecf0f1;
-  padding: 20px;
-  border-radius: 8px;
-  margin-bottom: 30px;
+/* Dashboard Section */
+.dashboard {
+  background: linear-gradient(135deg, #007bff, #6610f2);
+  color: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
 }
 
-/* Dashboard Stats */
 .stats {
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-around;
-  margin-bottom: 20px;
-}
-
-.stat {
-  text-align: center;
-  flex: 1 1 150px;
-  margin: 10px;
-}
-
-/* Academic Performance */
-.performance {
-  margin-bottom: 20px;
-}
-
-.marks-list {
-  display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
-}
-
-.mark-card {
-  background-color: #fff;
-  padding: 15px;
-  margin: 10px;
-  border-radius: 6px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  flex: 1 1 150px;
-  text-align: center;
-}
-
-.cgpa {
-  text-align: center;
-  margin-top: 10px;
-  font-size: 1.2em;
-  font-weight: bold;
-}
-
-/* Attendance Cards */
-.attendance-list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-}
-
-.attendance-card {
-  background-color: #fff;
-  padding: 15px;
-  margin: 10px;
-  border-radius: 6px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  flex: 1 1 150px;
-  text-align: center;
-}
-
-/* Course & Assignment Cards */
-.course-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-}
-
-.course-card,
-.assignment-card {
-  background-color: #fff;
-  padding: 15px;
-  border-radius: 6px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  flex: 1 1 200px;
-  text-align: center;
-}
-
-/* Assignment Submission Section */
-.assignment-submission {
   margin-top: 20px;
 }
 
-.assignment-submission input[type="file"] {
-  display: block;
-  margin-bottom: 10px;
+.stat {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 15px;
+  border-radius: 8px;
+  width: 30%;
+  min-width: 150px;
+  text-align: center;
+  transition: transform 0.3s ease-in-out;
 }
 
-.submission-status {
+.stat:hover {
+  transform: translateY(-5px);
+}
+
+/* Academic Performance & Attendance */
+.performance, .attendance {
+  background: white;
+  margin: 20px 0;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.marks-list, .attendance-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.mark-card, .attendance-card {
+  background: #007bff;
+  color: white;
+  padding: 15px;
+  border-radius: 6px;
+  margin: 10px;
+  width: 30%;
+  text-align: center;
+  transition: 0.3s ease;
+}
+
+.mark-card:hover, .attendance-card:hover {
+  background: #0056b3;
+}
+
+/* Ongoing & Upcoming Courses */
+.ongoing-courses, .upcoming-courses {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 20px 0;
+}
+
+.course-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.course-card {
+  background: #ff6600;
+  color: white;
+  padding: 15px;
+  border-radius: 8px;
+  margin: 10px;
+  width: 30%;
+  text-align: center;
+  transition: 0.3s ease;
+}
+
+.course-card:hover {
+  background: #cc5200;
+}
+
+.course-card button {
+  margin-top: 10px;
+  padding: 8px 12px;
+  background: white;
+  color: #ff6600;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.course-card button:hover {
+  background: #f5f5f5;
+}
+
+/* AI Study Buddy */
+.study-buddy {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 20px 0;
+}
+
+.chatbot input {
+  width: 80%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.chatbot button {
+  padding: 10px 15px;
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.chatbot button:hover {
+  background: #0056b3;
+}
+
+.chat-response {
   margin-top: 10px;
   font-weight: bold;
+  color: #007bff;
 }
 
-/* Form Styling for Teacher Messaging */
-.message-form label {
-  display: block;
-  margin-bottom: 5px;
-  font-weight: bold;
+/* Assignments & Quizzes */
+.assignments {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 20px 0;
 }
 
-.message-form select,
+.assignment-card {
+  background: #28a745;
+  color: white;
+  padding: 15px;
+  border-radius: 8px;
+  margin: 10px;
+  text-align: center;
+  transition: 0.3s ease;
+}
+
+.assignment-card:hover {
+  background: #218838;
+}
+
+/* Message Teachers */
+.message-teachers {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 20px 0;
+}
+
 .message-form textarea {
   width: 100%;
-  padding: 8px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
+  height: 80px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.message-form button {
+  margin-top: 10px;
+  padding: 10px 15px;
+  background: #dc3545;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.message-form button:hover {
+  background: #c82333;
+}
+
+.message-history ul {
+  list-style: none;
+  padding: 0;
+}
+
+.message-history li {
+  background: #f8d7da;
+  padding: 10px;
+  border-radius: 5px;
   margin-bottom: 10px;
 }
 
-/* Button Styling */
-button {
-  background-color: #2c3e50;
-  color: #ecf0f1;
-  border: none;
-  padding: 10px 15px;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-button:hover {
-  background-color: #34495e;
-}
-
-/* AI Study Buddy Input */
-.chatbot input[type="text"] {
-  width: 80%;
-  padding: 8px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  margin-right: 10px;
-}
-
-/* History Lists Styling */
-.message-history ul,
-.submission-history ul {
-  list-style: none;
-  padding-left: 0;
-}
-
-.message-history li,
-.submission-history li {
-  background-color: #fff;
-  margin-bottom: 8px;
-  padding: 8px;
-  border-radius: 4px;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-}
-
-/* Mobile Responsive Adjustments */
-@media (max-width: 600px) {
-  .stats,
-  .marks-list,
-  .attendance-list,
-  .course-list {
+/* Responsive Design */
+@media (max-width: 768px) {
+  .stats, .marks-list, .attendance-list, .course-list {
     flex-direction: column;
     align-items: center;
   }
 
-  .chatbot input[type="text"] {
+  .stat, .mark-card, .attendance-card, .course-card {
+    width: 80%;
+  }
+
+  .chatbot input {
     width: 100%;
-    margin-bottom: 10px;
+  }
+
+  .assignment-card {
+    width: 90%;
+  }
+
+  .message-form textarea {
+    height: 60px;
   }
 }
+
